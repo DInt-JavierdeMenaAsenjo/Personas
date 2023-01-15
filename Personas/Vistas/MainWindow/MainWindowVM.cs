@@ -27,6 +27,8 @@ namespace Personas
         public MainWindowVM()
         {
             NuevaCommand = new RelayCommand(CargarNueva);
+            ListaCommand = new RelayCommand(CargarLista);
+            sn = new ServicioNavegacion();
         }
 
         public void CargarNueva()
