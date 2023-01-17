@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Modelo\Persona.cs" />
     <Compile Include="Servicios\ServicioNavegacion.cs" />
     <Compile Include="Vistas\MainWindow\MainWindowVM.cs" />
     <Compile Include="Vistas\VentanaAñadir\VentanaAñadir.xaml.cs">
@@ -89,6 +90,10 @@
     <Compile Include="Vistas\VentanaAñadir\VentanaAñadirVM.cs" />
     <Compile Include="Vistas\VentanaLista\VentanaLista.xaml.cs">
       <DependentUpon>VentanaLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VentanaLista\VentanaListaVM.cs" />
+    <Compile Include="Vistas\VentanaNacionalidades\VentanaNacionalidades.xaml.cs">
+      <DependentUpon>VentanaNacionalidades.xaml</DependentUpon>
     </Compile>
     <Page Include="Vistas\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\VentanaLista\VentanaLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\VentanaNacionalidades\VentanaNacionalidades.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

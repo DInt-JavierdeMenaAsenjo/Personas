@@ -1,4 +1,5 @@
 ﻿using Personas.Vistas;
+using Personas.Vistas.VentanaNacionalidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,21 @@ namespace Personas
 {
     class ServicioNavegacion
     {
+        VentanaLista lista = new VentanaLista();
         public UserControl CargaLista()
         {
-            return new VentanaLista();
+            return lista;
         }
+        
         public UserControl CargaAñadir()
         {
             return new VentanaAñadir();
+        }
+
+        public bool? AbrirVentanaNacionalidades()
+        {
+            VentanaNacionalidades nueva = new VentanaNacionalidades();
+            return nueva.ShowDialog();
         }
     }
 }

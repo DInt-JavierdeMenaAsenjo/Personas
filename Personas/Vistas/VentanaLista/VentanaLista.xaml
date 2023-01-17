@@ -7,6 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Red">
-            
+        <ListBox ItemsSource="{Binding Path=Lista}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Nombre}"></TextBlock>
+                        <TextBlock Text=" - "></TextBlock>
+                        <TextBlock Text="{Binding Edad}"></TextBlock>
+                        <TextBlock Text=" - "></TextBlock>
+                        <TextBlock Text="{Binding Nacionalidad}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>

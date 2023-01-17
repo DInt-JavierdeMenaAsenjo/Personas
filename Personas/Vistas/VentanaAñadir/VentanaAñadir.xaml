@@ -13,8 +13,8 @@
         <TextBox Margin="5"></TextBox>
         <TextBlock Margin="5">Nacionalidad</TextBlock>
         <StackPanel Orientation="Horizontal" Margin="5">
-            <ComboBox Width="150"></ComboBox>
-            <Button Margin="5,0,0,0" Width="20" Height="20">+</Button>
+            <ComboBox Width="150" ItemsSource="{Binding Path=Nacionalidades}"></ComboBox>
+            <Button Margin="5,0,0,0" Width="20" Height="20" Command="{Binding Path=NacionalidadCommand}">+</Button>
         </StackPanel>
         <Button Width="120">Aceptar</Button>
     </StackPanel>

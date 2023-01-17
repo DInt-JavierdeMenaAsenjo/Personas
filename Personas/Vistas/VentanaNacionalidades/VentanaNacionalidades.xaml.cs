@@ -10,22 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Personas.Vistas
+namespace Personas.Vistas.VentanaNacionalidades
 {
     /// <summary>
-    /// Lógica de interacción para VentanaLista.xaml
+    /// Lógica de interacción para VentanaNacionalidades.xaml
     /// </summary>
-    public partial class VentanaLista : UserControl
+    public partial class VentanaNacionalidades : Window
     {
-        private VentanaListaVM vm;
-        public VentanaLista()
+        public VentanaNacionalidades()
         {
             InitializeComponent();
-            vm = new VentanaListaVM();
-            this.DataContext = vm;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
         }
     }
 }
