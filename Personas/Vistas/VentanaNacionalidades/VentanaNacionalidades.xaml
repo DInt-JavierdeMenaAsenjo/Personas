@@ -9,9 +9,9 @@
         ResizeMode="NoResize" ShowInTaskbar="False">
     <StackPanel>
         <TextBlock Margin="5,5,0,0">Nacionalidad</TextBlock>
-        <TextBox Margin="5"></TextBox>
+        <TextBox Margin="5" Text="{Binding Path=Nacionalidad}"></TextBox>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Margin="5" Width="80" IsDefault="True" Click="Button_Click">Aceptar</Button>
+            <Button Margin="5" Width="80" IsDefault="True" Click="Button_Click" Command="{Binding Path=addNacionalidadCommand}">Aceptar</Button>
             <Button Margin="5" Width="80" IsCancel="True">Cancelar</Button>
         </StackPanel>
     </StackPanel>

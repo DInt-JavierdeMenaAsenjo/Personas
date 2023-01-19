@@ -1,7 +1,10 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using Microsoft.Toolkit.Mvvm.Messaging;
+using Personas.Mensajeria;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +15,24 @@ namespace Personas
     {
         ServicioNavegacion sn = new ServicioNavegacion();
         public RelayCommand NacionalidadCommand { get; }
-        private List<String> nacionalidades;
+        private ObservableCollection<String> nacionalidades;
 
-        public List<String> Nacionalidades
+        public ObservableCollection<String> Nacionalidades
         {
             get { return nacionalidades; }
-            set { nacionalidades = value; }
+            set { SetProperty(ref nacionalidades, value); }
         }
         public VentanaAñadirVM()
         {
             NacionalidadCommand = new RelayCommand(CargarNacionalidades);
-            Nacionalidades = new List<String>();
+            Nacionalidades = new ObservableCollection<String>();
             Nacionalidades.Add("Italiana");
             Nacionalidades.Add("Española");
             Nacionalidades.Add("Francesa");
+            WeakReferenceMessenger.Default.Register<NacionalidadChangedMessage>(this, (r, m) =>
+            {
+                Nacionalidades.Add(m.Value);
+            });
         }
 
         public void CargarNacionalidades()

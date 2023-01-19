@@ -19,9 +19,12 @@ namespace Personas.Vistas.VentanaNacionalidades
     /// </summary>
     public partial class VentanaNacionalidades : Window
     {
+        private VentanaNacionalidadesVM vm;
         public VentanaNacionalidades()
         {
             InitializeComponent();
+            vm = new VentanaNacionalidadesVM();
+            this.DataContext = vm;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
