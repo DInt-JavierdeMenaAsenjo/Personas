@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Personas.Vistas.VentanaNacionalidades"
         mc:Ignorable="d"
         Title="VentanaNacionalidades" Height="120" Width="280"
-        ResizeMode="NoResize" ShowInTaskbar="False">
+        ResizeMode="NoResize" ShowInTaskbar="False"
+        Icon="/Imagenes/añadir.ico">
     <StackPanel>
         <TextBlock Margin="5,5,0,0">Nacionalidad</TextBlock>
         <TextBox Margin="5" Text="{Binding Path=Nacionalidad}"></TextBox>

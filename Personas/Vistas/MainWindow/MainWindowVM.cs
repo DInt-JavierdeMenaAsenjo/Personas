@@ -15,7 +15,8 @@ namespace Personas
 
         public RelayCommand NuevaCommand { get; }
         public RelayCommand ListaCommand { get; }
-        
+        public RelayCommand ConsultaCommand { get; }
+
 
         private UserControl contenidoMostrar;
 
@@ -29,6 +30,7 @@ namespace Personas
         {
             NuevaCommand = new RelayCommand(CargarNueva);
             ListaCommand = new RelayCommand(CargarLista);
+            ConsultaCommand = new RelayCommand(CargarConsulta);
             sn = new ServicioNavegacion();
         }
 
@@ -40,6 +42,11 @@ namespace Personas
         public void CargarLista()
         {
             ContenidoMostrar = sn.CargaLista();
+        }
+
+        public void CargarConsulta()
+        {
+            ContenidoMostrar = sn.CargaConsulta();
         }
 
     }

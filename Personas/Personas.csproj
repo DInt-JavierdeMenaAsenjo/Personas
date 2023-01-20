@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\personas.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -90,6 +93,10 @@
       <DependentUpon>VentanaAñadir.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VentanaAñadir\VentanaAñadirVM.cs" />
+    <Compile Include="Vistas\VentanaConsulta\VentanaConsulta.xaml.cs">
+      <DependentUpon>VentanaConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VentanaConsulta\VentanaConsultaVM.cs" />
     <Compile Include="Vistas\VentanaLista\VentanaLista.xaml.cs">
       <DependentUpon>VentanaLista.xaml</DependentUpon>
     </Compile>
@@ -111,6 +118,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Vistas\VentanaAñadir\VentanaAñadir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\VentanaConsulta\VentanaConsulta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,6 +161,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imagenes\añadir.ico" />
+    <Resource Include="Imagenes\personas.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
